@@ -1,53 +1,48 @@
 class CommentsController < ApplicationController
-  before_action :set_comment, only: [:show, :edit, :update, :destroy]
+  before_action :set_comment, only: [:show, :update, :destroy]
 
   # GET /comments
   # GET /comments.json
   def index
     @comments = Comment.all
+
+    render json: @comments
   end
 
   # GET /comments/1
   # GET /comments/1.json
   def show
+    render json: @comment
   end
 
-  # GET /comments/new
-  def new
-    @comment = Comment.new
-  end
+  # # GET /comments/new
+  # def new
+  #   @comment = Comment.new
+  # end
 
-  # GET /comments/1/edit
-  def edit
-  end
+  # # GET /comments/1/edit
+  # def edit
+  # end
 
   # POST /comments
   # POST /comments.json
   def create
     @comment = Comment.new(comment_params)
 
-    respond_to do |format|
-      if @comment.save
-        format.html { redirect_to @comment, notice: 'Comment was successfully created.' }
-        format.json { render :show, status: :created, location: @comment }
-      else
-        format.html { render :new }
-        format.json { render json: @comment.errors, status: :unprocessable_entity }
-      end
+    if @comment.save
+      render json: @comment, status: :created, location: @comment
+    else
+      render json: @comment.errors, status: :unprocessable_entity
     end
   end
 
   # PATCH/PUT /comments/1
   # PATCH/PUT /comments/1.json
   def update
-    respond_to do |format|
-      if @comment.update(comment_params)
-        format.html { redirect_to @comment, notice: 'Comment was successfully updated.' }
-        format.json { render :show, status: :ok, location: @comment }
-      else
-        format.html { render :edit }
-        format.json { render json: @comment.errors, status: :unprocessable_entity }
-      end
+    if @comment.update(comment_params)
+      render json: @comment
+    else
+      render json: @comment.errors, status: :unprocessable_entity
     end
   end
 
@@ -55,10 +50,10 @@ class CommentsController < ApplicationController
   # DELETE /comments/1.json
   def destroy
     @comment.destroy
-    respond_to do |format|
-      format.html { redirect_to comments_url, notice: 'Comment was successfully destroyed.' }
-      format.json { head :no_content }
-    end
+    # respond_to do |format|
+    #   format.html { redirect_to comments_url, notice: 'Comment was successfully destroyed.' }
+    #   format.json { head :no_content }
+    # end
   end
 
   private
