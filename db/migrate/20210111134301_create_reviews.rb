@@ -4,8 +4,8 @@ class CreateReviews < ActiveRecord::Migration[6.0]
       t.string :title
       t.text :description
       t.integer :score
-      t.campground :belongs_to
-      t.user :belongs_to
+      t.belongs_to :campground
+      t.belongs_to :user 
 
       t.timestamps
     end
