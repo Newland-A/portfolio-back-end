@@ -1,0 +1,62 @@
+<%= form_with(model: campground, local: true) do |form| %>
+  <% if campground.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(campground.errors.count, "error") %> prohibited this campground from being saved:</h2>
+
+      <ul>
+        <% campground.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :slug %>
+    <%= form.text_field :slug %>
+  </div>
+
+  <div class="field">
+    <%= form.label :image_url %>
+    <%= form.text_field :image_url %>
+  </div>
+
+  <div class="field">
+    <%= form.label :avg_score %>
+    <%= form.number_field :avg_score %>
+  </div>
+
+  <div class="field">
+    <%= form.label :hiking %>
+    <%= form.check_box :hiking %>
+  </div>
+
+  <div class="field">
+    <%= form.label :tent %>
+    <%= form.check_box :tent %>
+  </div>
+
+  <div class="field">
+    <%= form.label :rv %>
+    <%= form.check_box :rv %>
+  </div>
+
+  <div class="field">
+    <%= form.label :price %>
+    <%= form.text_field :price %>
+  </div>
+
+  <div class="field">
+    <%= form.label :hammocks %>
+    <%= form.check_box :hammocks %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

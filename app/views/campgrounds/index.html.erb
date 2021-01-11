@@ -1,0 +1,43 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Campgrounds</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Slug</th>
+      <th>Image url</th>
+      <th>Avg score</th>
+      <th>Hiking</th>
+      <th>Tent</th>
+      <th>Rv</th>
+      <th>Price</th>
+      <th>Hammocks</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @campgrounds.each do |campground| %>
+      <tr>
+        <td><%= campground.name %></td>
+        <td><%= campground.slug %></td>
+        <td><%= campground.image_url %></td>
+        <td><%= campground.avg_score %></td>
+        <td><%= campground.hiking %></td>
+        <td><%= campground.tent %></td>
+        <td><%= campground.rv %></td>
+        <td><%= campground.price %></td>
+        <td><%= campground.hammocks %></td>
+        <td><%= link_to 'Show', campground %></td>
+        <td><%= link_to 'Edit', edit_campground_path(campground) %></td>
+        <td><%= link_to 'Destroy', campground, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Campground', new_campground_path %>

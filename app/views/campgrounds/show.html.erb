@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @campground.name %>
+</p>
+
+<p>
+  <strong>Slug:</strong>
+  <%= @campground.slug %>
+</p>
+
+<p>
+  <strong>Image url:</strong>
+  <%= @campground.image_url %>
+</p>
+
+<p>
+  <strong>Avg score:</strong>
+  <%= @campground.avg_score %>
+</p>
+
+<p>
+  <strong>Hiking:</strong>
+  <%= @campground.hiking %>
+</p>
+
+<p>
+  <strong>Tent:</strong>
+  <%= @campground.tent %>
+</p>
+
+<p>
+  <strong>Rv:</strong>
+  <%= @campground.rv %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @campground.price %>
+</p>
+
+<p>
+  <strong>Hammocks:</strong>
+  <%= @campground.hammocks %>
+</p>
+
+<%= link_to 'Edit', edit_campground_path(@campground) %> |
+<%= link_to 'Back', campgrounds_path %>
