@@ -6,13 +6,13 @@ class CampgroundsController < ApplicationController
   def index
     @campgrounds = Campground.all
 
-    render json: @campgrounds
+    render json: @campgrounds.as_json(include: {reviews: {only: [:id, :title, :description, :score]}})
   end
 
   # GET /campgrounds/1
   # GET /campgrounds/1.json
   def show
-    render json: @campground
+    render json: @campground.as_json(include: {reviews: {only: [:id, :title, :description, :score]}})
   end
 
   # # GET /campgrounds/new
@@ -64,6 +64,6 @@ class CampgroundsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def campground_params
-      params.require(:campground).permit(:name, :slug, :image_url, :avg_score, :hiking, :tent, :rv, :price, :hammocks, :description)
+      params.require(:campground).permit(:name, :slug, :image_url, :avg_score, :hiking, :tent, :rv, :price, :hammocks, :description, reviews_attributes: [:id, :title, :description, :score])
     end
 end

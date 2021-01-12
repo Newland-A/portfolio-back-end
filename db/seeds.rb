@@ -47,10 +47,28 @@ Campground.create([
     hammocks: false,
     rv: true,
     price: 350.00
+  },
+  {
+    name: "Blanco State Park",
+    image_url: "",
+    description: "This small park hugs a one-mile stretch of the river. On the water, you can swim, fish, paddle or boat. On land, you can picnic, hike, camp, watch for wildlife, and geocache. Reserve the CCC-built picnic area or pavilion for your next group gathering. Take a virtual tour with our Interactive Trails Map.
+    
+    Swimming: 
+    Swim anywhere along the river. Small children will enjoy the shallow wading pool next to Falls Dam. Rent tubes at the park store from 9 a.m. to 2 p.m.; return tubes by 4 p.m.
+
+    Boating:
+    Bring your canoe, kayak or boat (electric motors only). Or rent a single or double kayak or tube at the park store to use in the park (available seasonally; $20 credit card deposit required). Rental hours are 9 a.m. to 2 p.m.; return kayaks by 4 p.m.",
+    avg_score: 3,
+    hiking: true,
+    tent: true,
+    hammocks: false,
+    rv: true,
+    price: 5.00
   }
+
 ])
 
-20.times do
+20.times do 
   Review.create([
     {
       title: Faker::Mountain.name,
@@ -59,10 +77,11 @@ Campground.create([
       campground_id: rand(1..5)
     }
   ])    
+
 end
 
 
-10.times do
+10.times do 
   User.create([
     {
       username: Faker::Internet.username(specifier: 5..8),

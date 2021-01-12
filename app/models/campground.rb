@@ -1,6 +1,8 @@
 class Campground < ApplicationRecord
   has_many :reviews
-  has_many :users
+  # has_many :users
+
+  accepts_nested_attributes_for :reviews
 
   validates :name, presence: true, length: { maximum: 255 }
 
