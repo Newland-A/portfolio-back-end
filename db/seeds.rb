@@ -4,7 +4,7 @@
 Campground.create([
   {
     name: "Acadia National Park",
-    image_url: "https://www.nps.gov/common/uploads/structured_data/3C7B45AE-1DD8-B71B-0B7EE131C7DFC2F5.jpg",
+    image_url: "../app/assets/images/campground_images/Arcadia.jpg",
     description: "Acadia National Park protects the natural beauty of the highest rocky headlands along the Atlantic coastline of the United States, an abundance of habitats, and a rich cultural heritage. At 3.5 million visits a year, it's one of the top 10 most-visited national parks in the United States. Visitors enjoy 27 miles of historic motor roads, 158 miles of hiking trails, and 45 miles of carriage roads.",
     avg_score: 4,
     hiking: true,
@@ -15,7 +15,7 @@ Campground.create([
   },
   {
     name: "Big Delta State Historic Park",
-    image_url: "",
+    image_url: "../app/assets/images/campground_images/big-delta.jpg",
     description: "Park interpretive guides give tours of the grounds and buildings. Brochures are also available for a self-guided tour of the park. Rika's Roadhouse Cafe and Gifts operated by Smiling Moose of Delta Junction is open daily 10 am to 4 pm, from May 15th through Labor Day. The Cafe serves homemade sandwiches, soups, pies, ice cream, and baked goods.",
     avg_score: 3,
     hiking: true,
@@ -26,7 +26,7 @@ Campground.create([
   },
   {
     name: "Cloudland Canyon State Park",
-    image_url: "",
+    image_url: "../app/assets/images/campground_images/cloudland-canyon-state-park.webp",
     description: "Cloudland Canyon State Park is located on the western edge of Lookout Mountain and is the part of the Cumberland Plateau. The developed section of the park is located between the two canyons of Bear Creek and Daniel Creek, just before they come together to form the larger Sitton's Gulch Creek. Two waterfalls cascade over layers of sandstone and shale into pools below, with their flow depending on recent rains.",
     avg_score: 5,
     hiking: true,
@@ -37,7 +37,7 @@ Campground.create([
   },
   {
     name: "Falls Lake State Recreational Park",
-    image_url: "",
+    image_url: "./app/assets/images/campground_images/blaco-state-park.jpeg",
     description: "DAY-USE AREAS open and close at the posted gate hours during their operating season. ALL CAMPGROUNDS at Falls Lake provide 24-hour access for campers only when any campsites are reserved or occupied, only during each campground's operating season. Campers will be given the after-hours emergency phone number upon check-in, or may contact a camp host in the event of an emergency.
 
     All day visitors, including those with picnic shelter or community building reservations, will be charged the per-vehicle entrance fee. This fee is charged daily from Memorial Day through Labor Day, and on weekends in April, May, and September.",
@@ -50,7 +50,7 @@ Campground.create([
   },
   {
     name: "Blanco State Park",
-    image_url: "",
+    image_url: '../app/assets/images/campground_images/blaco-state-park.jpeg',
     description: "This small park hugs a one-mile stretch of the river. On the water, you can swim, fish, paddle or boat. On land, you can picnic, hike, camp, watch for wildlife, and geocache. Reserve the CCC-built picnic area or pavilion for your next group gathering. Take a virtual tour with our Interactive Trails Map.
     
     Swimming: 
